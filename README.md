@@ -48,7 +48,11 @@ Due to security concerns, many are shifting away from using Jenkins for deployme
 
 In contrast, ArgoCD uses a pull-based mechanism, which is more secure. An ArgoCD agent is deployed inside the Kubernetes cluster, and it continuously syncs (or pulls) the manifests from a Git repository. Since the agent is already within the cluster, it does not need external access credentials to authenticate with the cluster, significantly reducing the security risks.
 
+what is the main difference b/w continous delivery and continous deployment
+--------------------------------------------------------------------------
 
+Continuous Delivery ensures that code is always ready to be deployed, but requires human approval for production releases.
+Continuous Deployment goes further, automatically deploying code to production as soon as it's tested and approved by the automated pipeline.
 
 
 
