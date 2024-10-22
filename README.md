@@ -56,6 +56,19 @@ Continuous Delivery ensures that code is always ready to be deployed, **but requ
 Continuous Deployment goes further, automatically deploying code to production as soon as **it's tested and approved by the automated pipeline**.
 
 
+Statefull set uses what network service
+---------------------------------------
+
+A StatefulSet in Kubernetes typically uses a Headless Service for network access to its pods.
+
+Headless Service: **Unlike a regular service, a headless service does not load-balance requests. Instead, it provides each pod in the StatefulSet with a stable, unique DNS name based on the pod's name**, allowing clients to connect directly to individual pods. This is important for stateful applications because each pod often needs a stable identity and direct access, such as for databases or other services requiring state persistence.
+Each pod in a StatefulSet can be accessed via a DNS name in the format:
+
+ <statefulset_name>-<pod_ordinal>.<service_name>
+
+This ensures that the pods have stable network identities even after restarts.
+
+
 
 
 
