@@ -32,12 +32,22 @@
 
   **task definition blueprint ha for your application. jo k define krta ha k jb service ma task create hoga tu us ma container kis traha sa configure or run hoga..**
 
+Instance group(an Instance Group is a collection of virtual machine (VM) instances that are managed together for better scalability and availabilit)
+-----------------
 
 Type	                           Key Features	                                                                                    Use Cases
 Managed Instance Group (MIG)	   Auto-scaling, auto-healing, load balancing, rolling updates, uses instance templates.	          Web servers, scalable services.
 Unmanaged Instance Group	       Manually managed, no auto-scaling or auto-healing, instances can have different configurations.	Heterogeneous VMs, specific manual control.
 Zonal Managed Instance Group	   Operates within a single zone, not highly available across zones.	                              Development environments, non-critical apps.
 Regional Managed Instance Group	 Operates across multiple zones, highly available, distributes traffic across zones.	            Production workloads requiring high availability.
+
+why jenkins is deprecated and gitops(argocd) is helpfull
+-------------------------------------------------------
+
+Due to security concerns, many are shifting away from using Jenkins for deployments and moving towards GitOps tools like ArgoCD. Jenkins operates on a push-based mechanism, where it requires access to the cluster for deployments. To enable this, cluster authentication credentials must be provided to Jenkins. However, this poses a security risk, as these credentials can potentially be exposed, leaving the cluster vulnerable.
+
+In contrast, ArgoCD uses a pull-based mechanism, which is more secure. An ArgoCD agent is deployed inside the Kubernetes cluster, and it continuously syncs (or pulls) the manifests from a Git repository. Since the agent is already within the cluster, it does not need external access credentials to authenticate with the cluster, significantly reducing the security risks.
+
 
 
 
