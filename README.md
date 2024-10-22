@@ -51,9 +51,9 @@ In contrast, ArgoCD uses a pull-based mechanism, which is more secure. An ArgoCD
 What is the main difference b/w continous delivery and continous deployment
 --------------------------------------------------------------------------
 
-Continuous Delivery ensures that code is always ready to be deployed, but requires human approval for production releases.
+Continuous Delivery ensures that code is always ready to be deployed, **but requires human approval for production releases**.
 
-Continuous Deployment goes further, automatically deploying code to production as soon as it's tested and approved by the automated pipeline.
+Continuous Deployment goes further, automatically deploying code to production as soon as **it's tested and approved by the automated pipeline**.
 
 
 
