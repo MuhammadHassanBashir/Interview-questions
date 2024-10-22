@@ -41,7 +41,7 @@ Unmanaged Instance Group	       Manually managed, no auto-scaling or auto-healin
 Zonal Managed Instance Group	   Operates within a single zone, not highly available across zones.	                              Development environments, non-critical apps.
 Regional Managed Instance Group	 Operates across multiple zones, highly available, distributes traffic across zones.	            Production workloads requiring high availability.
 
-why jenkins is deprecated and gitops(argocd) is helpfull
+ Why jenkins is deprecated and gitops(argocd) is helpfull
 -------------------------------------------------------
 
 Due to security concerns, many are shifting away from using Jenkins for deployments and moving towards GitOps tools like ArgoCD. Jenkins operates on a push-based mechanism, where it requires access to the cluster for deployments. To enable this, cluster authentication credentials must be provided to Jenkins. However, this poses a security risk, as these credentials can potentially be exposed, leaving the cluster vulnerable.
